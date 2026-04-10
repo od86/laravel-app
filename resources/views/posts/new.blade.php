@@ -1,7 +1,7 @@
 <x-layout>
   <h1>New Page</h1>
 
-  <form action="/posts/new" method="post">
+  <form action="/posts" method="post">
     <div class="field">
       <label for="title">Title</label>
       <input type="text" id="title" name="title">
