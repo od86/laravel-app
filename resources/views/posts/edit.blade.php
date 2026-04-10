@@ -19,4 +19,13 @@
       <button type="submit">Update</button>
     </div>
   </form>
+
+  <form action="/posts/{{ $post->id }}" method="post">
+    @csrf
+    @method('DELETE')
+
+    <div class="actions">
+      <button type="delete">Delete</button>
+    </div>
+  </form>
 </x-layout>
