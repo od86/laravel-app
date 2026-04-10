@@ -12,7 +12,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('/posts/index', [ 'posts' => Post::all(), ]);
+        return view('posts.index', [ 'posts' => Post::all(), ]);
     }
 
     /**
@@ -33,7 +33,7 @@ class PostController extends Controller
             'body' => request('body'),
         ]);
 
-        return redirect('/posts/index');
+        return redirect('posts');
     }
 
     /**
@@ -41,7 +41,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('posts.show', ['post' => $post]);
     }
 
     /**
